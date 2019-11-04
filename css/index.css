@@ -61,45 +61,106 @@ h1, h2, h3, h4, h5 {
 
 .container {
     width: 880px;
-    margin: auto;
+    margin: 0 auto;
 }
-
 /* Header Styles */
-
 header {
     width: 100%;
     display: flex;
 }
-
 header nav {
     margin-top: 40px; 
     width: 610px;
     justify-content: space-between;
     display: flex;
 }
-
 header nav a {
     text-decoration: none;
     color: #b0b0b0;
 }
-
 header nav a:hover {
     text-decoration: underline;
     color: black;
 }
-
 header .logo {
     margin: 28px 0 0 91px;
 }
+@media (max-width: 800px) {
+    .container {
+      width: 100%;
+      margin: 0 auto;
+    }
+  
+    header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+  
+    header nav {
+        display: flex;
+        order: 1;
+        justify-content: space-around;
+        width: 100%;
+    }
+  
+    header .logo {
+        margin: 20px 50px 20px 50px;
+    }
+  
+  }
+@media (max-width: 500px) {
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
 
-/* Call To Action (CTA) Styles */
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* margin: 10px; */
+        align-content: space-between;
+        margin: 10px;
+    }
 
+    header nav a {
+        display: flex;
+        margin: 10px;
+        padding: 10px;
+        border-bottom: 1px solid gray;
+        width: 100%;
+        justify-content: center;
+        font-size: 1.2rem;
+    }
+
+    header .logo {
+        /* width: 50%; */
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        border-bottom: 1px solid gray;
+        padding: 20px;
+
+    }
+
+    img {
+        display: none;
+    }
+}
+/* Call To Action (Main) Styles */
 .main {
     display: flex;
     margin-top: 72px;
     justify-content: flex-end;
 }
-
 .main .main-text {
     font-size: 72px;
     text-align: center;
@@ -110,7 +171,6 @@ header .logo {
     align-items: center;
     margin: 0 82px 0 0;
 }
-
 .main .main-text button {
     border: 1px double black;
     font-size: 16px;
@@ -120,14 +180,39 @@ header .logo {
     margin-top: 10px;
     cursor: pointer;
 }
-
 .main .main-text button:hover {
     background: black;
     color: white;
 }
-
+@media (max-width: 800px) {
+    
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+  
+    .main .main-text {
+        display: flex;
+        flex-direction: column;
+      margin: 30px 50px 30px 0px;
+      text-align: center;
+    }
+  
+    .main img {
+      display: none;
+    }
+}
+@media (max-width: 500px) {
+    .main {
+        margin: 15px;
+    }
+    .main .main-text img {
+        display: none;
+    }
+}
 /* Main Content Styles */
-
 .main-content {
    border-top: 2px solid black; 
    border-bottom: 2px solid black;
@@ -136,61 +221,108 @@ header .logo {
    font-size: 16px;
    line-height: 18px;
 }
-
 .main-content .top-content {
     display: flex;
 }
-
 .main-content .middle-img {
     display: block;
     margin: 30px auto;
 }
-
 .main-content .bottom-content {
     display: flex;
 }
-
 .main-content .bottom-content p {
     padding-right: 20px;
 }
+@media (max-width: 800px) {
+    .main-content {
+        border-top: 2px solid black;
+        margin: 20px;
+    }
+  
+    .main-content .middle-img {
+      width: 100%;
+    }
+    .main-content .top-content .text-content {
+        width: 100%;
+        margin-right: 10px;
+    }
+}
+@media (max-width: 500px) {
+    .main-content {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+        align-content: space-evenly;
+    }
+    .main-content .top-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-content .top-content .text-content {
+        margin-bottom: 40px;
+    }
+    .main-content .middle-img {
+        width: 100%;
+    }
+    .main-content .bottom-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+    }
+
+    .main-content .bottom-content .text-content {
+        margin-bottom: 40px;
+        margin-bottom: 20px;
+    }
+}
 
 /* Contact Styles */
-
 .contact p {
     margin: 15px 0;
 }
+@media (max-width: 800px) {
+    .contact {
+        width: 100%;
+        margin: 40px 20px 20px 20px;
+        margin: 20px;
+        /* margin: 40px 20px 20px 20px; */
+    }
+}
 
+@media (max-width: 500px) {
+    .contact {
+        width: 100%;
+        margin: 20px;
+    }
+}
 /* Footer Styles */
-
 footer {
     text-align: center;
     margin: 40px 0 20px;
 }
-
 /* Services Styles */
-
 .services-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     line-height: 1.3;
 }
-
 .services-content .services-header-img {
     margin: 20px 0;
 }
-
 .services-content h1 {
     font-size: 26px;
     margin: 10px 0;
 }
-
 .services-content .services-text {
  border-bottom: 1px solid black;
  padding-bottom: 40px;
  margin-bottom: 20px
 }
-
 .services-content .card {
     padding: 20px;
     border: 1px solid black;
@@ -198,7 +330,6 @@ footer {
     background: whitesmoke;
     margin: 20px 0;
 }
-
 .services-content .card button {
     padding: 10px 40px;
     margin-top: 20px;
@@ -207,21 +338,17 @@ footer {
     border-radius: 5px;
     border: 1px solid black;
 }
-
 .services-content .card button:hover {
     background: black;
     color: white;
 } 
-
 .services-content .services-info ul {
     margin: 20px;
 }
-
 .services-content .services-info ul li{
     list-style: square;
     padding: 5px;
 }
-
 .services-content .services-info {
     display: flex;
     flex-wrap: wrap;
@@ -229,18 +356,18 @@ footer {
     margin: 20px 0 35px 0;
     padding-top: 40px; 
 }
-
 .services-content .services-info .facts {
   width: 400px;
   margin: 0 60px 20px 0;
 }
-
 .services-content .services-info .facts p {
   margin-bottom: 20px;
 }
-
 .services-content .services-info .services-info-img {
   width: 420px;
-  height: 300px;
-} 
+  height: 300px;a
+}
+
+
+
 
